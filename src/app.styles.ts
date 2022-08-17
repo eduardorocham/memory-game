@@ -40,8 +40,8 @@ export const  InfoArea = styled.div`
 
 export const GridArea = styled.div`
     flex: 1;
+    display: flex;
     justify-content: flex-end;
-    display: grid;
 
     @media (max-width: 750px) {
         justify-content: center;
@@ -50,8 +50,12 @@ export const GridArea = styled.div`
 `;
 
 export const Grid = styled.div`
-    width: 430px
+    width: 430px;
     display: grid;
-    grid-template-columns: (4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+
+    @media(max-width: 750px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
 `
